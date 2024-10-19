@@ -124,11 +124,12 @@ class Weibo_PostCount_byMonth_Spider(scrapy.Spider):
                 self.retry_times += 1
                 self.page += 1
                 self.url = self.base_url+f"?page={self.page}"
+                self.logger.warning(f"retry > 3 try next page; retry_times:{self.retry_times}")
                 yield scrapy.Request(self.url, callback=self.parse, cookies=self.Cookie2)
                 return
             else: #retry current page
                 self.retry_times += 1 
-                print(f"sleep 30sec and retry page:{self.page}; retry_times:{self.retry_times}")
+                self.logger.warning(f"sleep 30sec and retry page:{self.page}; retry_times:{self.retry_times}")
                 time.sleep(30)
                 yield scrapy.Request(self.url, callback=self.parse, cookies=self.Cookie2, dont_filter=True)
                 return
@@ -136,6 +137,7 @@ class Weibo_PostCount_byMonth_Spider(scrapy.Spider):
         #save item
         l = ItemLoader(item=TrendingSpiderItem())
         l.add_value('time', post_time.format("YYYY-MM-DD HH:mm:ss"))
+        self.logger.info(f"page:{self.page}-value{post_time.format("YYYY-MM-DD HH:mm:ss")}")
         yield l.load_item()
 
         #next page
