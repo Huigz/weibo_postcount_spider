@@ -105,6 +105,7 @@ class Weibo_PostCount_byMonth_Spider(scrapy.Spider):
             print(f"sleep 30sec and retry page:{self.page}")
             time.sleep(30)
             yield scrapy.Request(self.url, callback=self.parse, cookies=self.Cookie2, dont_filter=True)
+            return
         htmls = response.css('script::text').re(r'html.*')
         time_title = None
         for i in range(len(htmls)-1, 0, -1):
