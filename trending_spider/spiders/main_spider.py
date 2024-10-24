@@ -30,21 +30,22 @@ class Weibo_PostCount_byMonth_Spider(scrapy.Spider):
     }
 
     Cookie2 = {
-    "SINAGLOBAL": "8524350012140.869.1721578038069",
-    "SCF": "At25fYeZQrrINx-LnVgsFa5Bnajwi-2MzjMebOcUJBe97vCuavBHnzXjSHRanX2TjMPOu2J0cO3s28oAQC9uN4M.",
-    "UOR": ",,www.google.com.hk",
-    "_s_tentry": "passport.weibo.com",
-    "Apache": "7132366675392.468.1729307681936",
-    "ULV": "1729307681938:5:3:1:7132366675392.468.1729307681936:1728190112854",
-    "WBtopGlobal_register_version": "2024101911",
-    "wb_view_log_6470445542": "1920*10801",
-    "XSRF-TOKEN": "cGTWTZcjZWQ1O6Y-ZXa3OFw9",
-    "SUB": "_2A25KFyFGDeThGeBK7FIV9CvJzz6IHXVpbTyOrDV8PUNbmtB-LW3MkW9NR4I0vQ8O3enZ6stsimUKRh1_mX7o4fWM",
-    "SUBP": "0033WrSXqPxfM725Ws9jqgMF55529P9D9WWNjUojElMwvY5e4olrIAoi5JpX5KzhUgL.FoqXS05XSh-fShz2dJLoI7LzUgLrwoe71hMt",
-    "ALF": "02_1731911190",
-    "WBPSESS": "Dt2hbAUaXfkVprjyrAZT_IK8gIlSH8rL4FW508AZf1LAZZxcTsw__WNY3BYTBEfhGHlrKuCsq5ANolqQud3t9XqANkKG3cX5OHXwljpHa745dLBRCCrBAoL6umu1nTuDTloisidWJflEF1idLATnUbUe7AysupFZCPsRodCMkUCQLEIlTqfe846DEWrpOX9eEE4HizLYNYyYy76tu9ciSQ==",
-    "webim_unReadCount": "%7B%22time%22%3A1729319199042%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22chat_group_notice%22%3A0%2C%22allcountNum%22%3A8%2C%22msgbox%22%3A0%7D"
-    }
+  "SCF": "Alagf-weAQRGtAnfrV829LjMqlXUA9jF34c0UwubC9Ldyf1qTfegm_sQt8reyroQSbv1PZQY5JXl7PqRmO56sl0.",
+  "SINAGLOBAL": "25422661811.929092.1720086177256",
+  "UOR": ",,weibo.cn",
+  "XSRF-TOKEN": "dS1VyKlhQPmzaLgU-xaUf3BB",
+  "_s_tentry": "passport.weibo.com",
+  "Apache": "5302458890479.685.1728543351823",
+  "ULV": "1728543351825:3:1:1:5302458890479.685.1728543351823:1721032381341",
+  "ALF": "1732362918",
+  "SUB": "_2A25KHkX2DeThGeBK7FIV9CvJzz6IHXVpUsc-rDV8PUJbkNANLRClkW1NR4I0vXxZek_jfTrva1Dtuz83pVka_iS5",
+  "SUBP": "0033WrSXqPxfM725Ws9jqgMF55529P9D9WWNjUojElMwvY5e4olrIAoi5JpX5KMhUgL.FoqXS05XSh-fShz2dJLoI7LzUgLrwoe71hMt",
+  "WBPSESS": "j1VDLQPMFRM5F_ozctP1q3n8FxLyiiAf5mx_jRuFq-TCw4r2U6_24elfWoxlQgdTkmyOEPJJmsToncWgTQabHGToBUZQPWEDRDZVI8aVUXKOhHyvseve0z4VSJSgMsWIayL2P4i3qFWDWwN5iyElkA==",
+  "_tea_utm_cache_10000007": "undefined",
+  "PC_TOKEN": "fef792d192",
+  "wb_view_log_6470445542": "1470*9562",
+  "webim_unReadCount": "%7B%22time%22%3A1729770937291%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22chat_group_notice%22%3A0%2C%22allcountNum%22%3A21%2C%22msgbox%22%3A0%7D"
+}
     
     custom_settings = {
         'FEEDS':{
@@ -102,7 +103,7 @@ class Weibo_PostCount_byMonth_Spider(scrapy.Spider):
 
     def parse(self, response, **kwargs):
         if not response.url.startswith(self.base_url):
-            print(f"sleep 30sec and retry page:{self.page}")
+            self.logger.warning(f"sleep 30sec and retry page:{self.page}")
             time.sleep(30)
             yield scrapy.Request(self.url, callback=self.parse, cookies=self.Cookie2, dont_filter=True)
             return
