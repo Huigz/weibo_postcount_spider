@@ -16,18 +16,15 @@ class Weibo_PostCount_byMonth_Spider(scrapy.Spider):
   "SCF": "Alagf-weAQRGtAnfrV829LjMqlXUA9jF34c0UwubC9Ldyf1qTfegm_sQt8reyroQSbv1PZQY5JXl7PqRmO56sl0.",
   "SINAGLOBAL": "25422661811.929092.1720086177256",
   "UOR": ",,weibo.cn",
-  "XSRF-TOKEN": "dS1VyKlhQPmzaLgU-xaUf3BB",
   "_s_tentry": "passport.weibo.com",
   "Apache": "5302458890479.685.1728543351823",
   "ULV": "1728543351825:3:1:1:5302458890479.685.1728543351823:1721032381341",
-  "ALF": "1732362918",
-  "SUB": "_2A25KHkX2DeThGeBK7FIV9CvJzz6IHXVpUsc-rDV8PUJbkNANLRClkW1NR4I0vXxZek_jfTrva1Dtuz83pVka_iS5",
   "SUBP": "0033WrSXqPxfM725Ws9jqgMF55529P9D9WWNjUojElMwvY5e4olrIAoi5JpX5KMhUgL.FoqXS05XSh-fShz2dJLoI7LzUgLrwoe71hMt",
   "_tea_utm_cache_10000007": "undefined",
-  "wb_view_log_6470445542": "1470*9562",
-  "WBPSESS": "j1VDLQPMFRM5F_ozctP1q5cPHAIu68EvoBqGyMyeWz0dG43cliwflBE89QP7K5_62xGasf9LLiIT-y5GR4C94LKLRHZhC9WBMQp7itODj0RBJ6Md0FbzQShT8Bnl-13l",
-  "webim_unReadCount": "%7B%22time%22%3A1729863676355%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22chat_group_notice%22%3A0%2C%22allcountNum%22%3A22%2C%22msgbox%22%3A0%7D",
-  "PC_TOKEN": "b916f1bbae"
+  "ALF": "1732456771",
+  "SUB": "_2A25KH9QTDeThGeBK7FIV9CvJzz6IHXVpVWnbrDV8PUJbkNANLVTekW1NR4I0vTPJlzBWdJwwwcJ3xfQTaWFae2vX",
+  "PC_TOKEN": "bee7167fc3",
+  "webim_unReadCount": "%7B%22time%22%3A1729865115363%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22chat_group_notice%22%3A0%2C%22allcountNum%22%3A22%2C%22msgbox%22%3A0%7D"
 }
     
     custom_settings = {
