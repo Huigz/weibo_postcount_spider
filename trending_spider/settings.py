@@ -14,7 +14,7 @@ NEWSPIDER_MODULE = "trending_spider.spiders"
 
 LOG_ENABLED = True
 
-LOG_LEVEL = 'WARNING'
+#LOG_LEVEL = 'WARNING'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "trending_spider (+http://www.yourdomain.com)"
 
