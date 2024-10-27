@@ -28,6 +28,7 @@ class Weibo_PostCount_byMonth_Spider(scrapy.Spider):
 }
     
     custom_settings = {
+        'REDIRECT_ENABLED':False,
         'FEEDS':{
             'data/time_%(supertopic_id)s.csv': {
             'format': 'csv',  
@@ -82,7 +83,7 @@ class Weibo_PostCount_byMonth_Spider(scrapy.Spider):
             raise CloseSpider("[str2time][Error] can't matching time:".format(time_string))
 
     def parse(self, response, **kwargs):
-        if not response.url.startswith(self.base_url):
+        if response.status == 302:
             self.logger.warning(f"sleep 30sec and retry page:{self.page}")
             time.sleep(30)
             yield scrapy.Request(self.url, callback=self.parse, cookies=self.Cookie2, dont_filter=True)
