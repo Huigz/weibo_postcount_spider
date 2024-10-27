@@ -27,7 +27,6 @@ class Weibo_PostCount_byMonth_Spider(scrapy.Spider):
   "SUBP": "0033WrSXqPxfM725Ws9jqgMF55529P9D9W50qsOapKg54JXgmx1CLI545JpX5KzhUgL.FoM4SKMpSh-7SK-2dJLoIp7LxKML1KBLBKnLxKqL1hnLBoMN1K-NeKBfeh-f",
   "ALF": "02_1732267625",
   "WBPSESS": "Dt2hbAUaXfkVprjyrAZT_EVh7ns9ZPk-KEh565kKfCrZ-7RYeNjDVveyYruw4OUd6dHUYCFpRQzxqsCvQkjcuE4_Y4mUrujQzjbxkP02l6O3VLywfy46YZMCFfwyeTRUWEE9nrh4i6JAUz4NM-YdM4uvPhnOfmL2AH0nBcjmUEVP1-bD6kYf_7xb4nRqwWqf8sB1iduxP_zqEpDJQedNXw==",
-  "PC_TOKEN": "25ed02b562",
   "wb_view_log_7957145055": "1920*10801",
   "webim_unReadCount": "%7B%22time%22%3A1729675658919%2C%22dm_pub_total%22%3A0%2C%22chat_group_client%22%3A0%2C%22chat_group_notice%22%3A0%2C%22allcountNum%22%3A0%2C%22msgbox%22%3A0%7D"
 }
